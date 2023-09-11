@@ -1,0 +1,19 @@
+
+--drop table if exists offers CASCADE 
+--drop table if exists orders CASCADE 
+--drop table if exists quotes CASCADE 
+--drop sequence if exists offers_no_seq
+--drop sequence if exists orders_no_seq
+--drop sequence if exists requests_no_seq
+--
+-- create sequence offers_no_seq start with 1 increment by 50
+-- create sequence orders_no_seq start with 1 increment by 50
+--
+-- create sequence requests_no_seq start with 1 increment by 50
+--
+-- create table offers (offer_no integer not null, owner varchar(255) not null, request_no integer not null, buyer varchar(255), carrier varchar(255), currency varchar(255), delivery_terms varchar(255), description varchar(255), final_dest varchar(255), first_ship_date date, item varchar(255) not null, lading_point varchar(255), last_ship_date date, manufacturer varchar(255), offer_date date, origin_cntry varchar(255), payment_terms varchar(255), payment_type varchar(255), status varchar(255), supplier varchar(255), vendor_name varchar(255), primary key (offer_no, owner, request_no))
+--
+-- create table orders (order_no integer not null, buyer varchar(255), carrier varchar(255), currency varchar(255), delivery_terms varchar(255), description varchar(255), final_dest varchar(255), first_ship_date date, item varchar(255) not null, lading_point varchar(255), last_ship_date date, manufacturer varchar(255), modify_ts timestamp, modify_user varchar(255), offer_no integer not null, order_date date, origin_cntry varchar(255), owner varchar(255) not null, payment_terms varchar(255), payment_type varchar(255), status varchar(255), supplier varchar(255), tot_calc_cost decimal(7,2), tot_grs_value decimal(7,2), tot_grs_wgt decimal(7,2), tot_qty decimal(7,2), vendor_name varchar(255), primary key (order_no))
+--
+-- create table quotes (owner varchar(255) not null, request_no integer not null, allocated_qty decimal(19,2), brand varchar(255), buyer varchar(255), category varchar(255), currency varchar(255), delivery_terms varchar(255), dept varchar(255), description varchar(255), division varchar(255), hts_no varchar(255), import_cntry varchar(255), item varchar(255) not null, item_class varchar(255), modify_ts timestamp, modify_user varchar(255), request_price decimal(19,2), requested_by varchar(255), primary key (owner, request_no))
+-- alter table offers add constraint FK4vynfpu4tr1281vhuvew3xqh7 foreign key (owner, request_no) references quotes
