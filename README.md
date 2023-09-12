@@ -1,13 +1,7 @@
-# angular8_springboot_jpa_AWS
+# angular16_springboot_jpa_AWS
 
-This project embedded angular8 app into springboot and deploy it into AWS Elastic Beanstalk.
+This project embedded angular8 app into springboot and we can deploy it into AWS Elastic Beanstalk.
 It is like simplified Microservice and REST application.
-
-http://angular8springbootaws-env.eba-bdygg4gk.us-east-2.elasticbeanstalk.com/
-
-http://angular8springbootaws-env.eba-bdygg4gk.us-east-2.elasticbeanstalk.com/listquotesxml
-
-http://angular8springbootaws-env.eba-bdygg4gk.us-east-2.elasticbeanstalk.com/listquotesjson
 
 For easy way to embedded angular into springboot. there are some points:
 
@@ -33,5 +27,5 @@ For easy way to embedded angular into springboot. there are some points:
 (7) After created jar file, run it at local command console:   java -jar  yourjarfile, and open http://localhost:5000/
     If you see error, just check/compare my application files or google it. It should work. 
 
-(8) Finally, deploy it into AWS Elastic Beanstalk (create free account and go to "Elastic Beanstalk Console", create new environment
+(8) Finally, deploy it into AWS Elastic Beanstalk (create free account (it may be not free in 2023) and go to "Elastic Beanstalk Console", create new environment
     and add new instance by uploading jar file into it. AWS will take care of port and url by giving you a link)
