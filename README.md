@@ -1,6 +1,6 @@
 # angular16_springboot_jpa_AWS
 
-This project embedded angular8 app into springboot and we can deploy it into AWS Elastic Beanstalk.
+This project embedded angular16 app into springboot and we can deploy it into AWS Elastic Beanstalk.
 It is like simplified Microservice and REST application.
 
 For easy way to embedded angular into springboot. there are some points:
