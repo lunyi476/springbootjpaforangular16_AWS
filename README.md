@@ -5,7 +5,7 @@ It is like simplified Microservice and REST application.
 
 For easy way to embedded angular into springboot. there are some points:  
 
-(0) In order to use gulpfile as ES Module (import  instead of require), change package to type: module in root directory,
+(0) In order to use gulpfile.js as ES Module (import  instead of require), change package to type: module in root directory,
 not chnage angular project package.json (still use reqire of CommonJS module).  
 
 
